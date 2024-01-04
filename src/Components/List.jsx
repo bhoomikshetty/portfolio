@@ -5,15 +5,11 @@ const ListComponent = () => {
 
     return (
     <div style={{display: 'flex', overflowX: 'scroll', overflowY: 'hidden'}}>
-            <CardComponent width={100} />
-            <CardComponent/>
-            <CardComponent/>
-            <CardComponent/>
-            <CardComponent/>
-            <CardComponent/>
-            <CardComponent/>
-            <CardComponent/>
-            <CardComponent/>
+        {
+            Array.from(Array(10)).map((item) => {
+                return <CardComponent key={item}/>
+            })
+        }
     </div>)
 }
 
