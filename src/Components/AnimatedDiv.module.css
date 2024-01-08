@@ -1,0 +1,81 @@
+
+.canvas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(53,53,53);
+    min-height: 100vh;
+}
+
+/* .mainFlex{
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+} */
+
+.mainContainer{
+    position: absolute;
+    padding:  32px 64px;
+    border-radius: 8px;
+    background-color: black;
+    border: 2px aliceblue solid;
+    color: aliceblue;
+    z-index: 1;
+    animation-name: skewAndTranlate;
+    animation-duration: 5000ms;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+
+}
+
+
+@keyframes skewAndTranlate {
+    0% {
+        transform: skewY(0);
+        margin-right: 0px;
+    }
+    50% {
+        transform: skewY(25deg);
+        margin-right: 0px;
+    }
+    100% {
+        margin-right: 256px;
+        transform: skewY(25deg);
+    }
+}
+
+
+.mainContainerDuplicate {
+    position: relative;
+    color: aliceblue;
+    opacity: 0;
+    transform: skewY(25deg);
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-direction: normal;
+    animation-fill-mode: forwards ;
+    animation-timing-function: ease;
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.listDiv{
+    position: relative;
+    top: 22px;
+    margin: 16px 0px;
+    padding: 32px 64px;
+    border-radius: 8px;
+    background-color: black;
+    border: 2px aliceblue solid;
+    color: aliceblue;
+}
