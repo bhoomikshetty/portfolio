@@ -1,14 +1,18 @@
 import TechstackComponent from '../Components/TechstackComponent';
 import NavbarComponent from '../Components/Navbar';
 import ListComponent from '../Components/List';
-import ListAnimationComponent from '../Components/ListAnimation';
-import CardComponent from '../Components/Card';
 import ListAnimation from '../Components/ListAnimation';
+import AnimatedDiv from '../Components/AnimatedDiv';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function Home(){
 
+    
+    const [mousePosition, setMousePosition] = useState({x: 0, y: 0})
+
     return (<>
+    <div>
         <div style={{width: '100vh', height: '80vh'}}/>
         <div style= {{top: 32, zIndex: 100, position: 'sticky', display: 'flex', justifyContent: 'center'}}>
             <NavbarComponent one={()=>{
@@ -19,8 +23,8 @@ export default function Home(){
             <TechstackComponent/>
         </div>
         <ListAnimation id='#about'/>
-        {/* <ListAnimationComponent child={<CardComponent/>}/> */}
-        {/* {console.log("Here it is" + <CardComponent/> + CardComponent({width: 100}))} */}
         <ListComponent/>
+        <AnimatedDiv/>
+        </div>
     </>)
 }

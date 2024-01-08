@@ -7,7 +7,7 @@ const ListComponent = () => {
     <div style={{display: 'flex', overflowX: 'scroll', overflowY: 'hidden'}}>
         {
             Array.from(Array(10)).map((item) => {
-                return <CardComponent key={item}/>
+            return <CardComponent key={item}/>
             })
         }
     </div>)

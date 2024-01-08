@@ -51,13 +51,13 @@ const ListAnimationComponent = (props) => {
 
     
     return <>
-        <div id='animation' style={{display: 'flex', justifyContent:'start'}} ref={componentRef}>
+        <div id='animation' style={{ display: 'flex', justifyContent:'start', minHeight: '100vh', backgroundColor: 'rgb(53,53,53)'}} ref={componentRef}>
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <div style={{height: `${divHeight}px`, borderLeft: '4px solid', borderImage: `linear-gradient(0deg,transparent, ${lightblueColor}, ${purpleColor}, transparent) 1`, transitionProperty: 'height', transitionDuration: '1.5s', transitionTimingFunction: 'ease-in-ease-out'}}></div>
                 <img src={codesvg} alt='codesvg' style={{width:'64px', opacity: `${logoOpacity}`, backdropFilter: 'blur(5000px)', background: `radial-gradient(${purpleColor} 2%, transparent, transparent)`, transitionProperty: 'opacity', transitionDuration: '0.75s', transitionTimingFunction: 'ease-in-ease-out'}}/>
                 <div style={{height: `${div2Height}px`, borderLeft: '4px solid', borderImage: `linear-gradient(0deg,transparent, ${greenColor}, ${lightblueColor}, transparent) 1`,  transitionProperty: 'height', transitionDuration: '1.5s', transitionTimingFunction: 'ease-in-ease-out'}}></div>
             </div>
-            <div style={{width: '100%', height: '720px'}}>
+            <div>
                 {props.child}
             </div>
         </div>
