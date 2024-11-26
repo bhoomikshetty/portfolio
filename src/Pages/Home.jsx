@@ -18,7 +18,7 @@ export default function Home(){
             <NavbarComponent one={()=>{
             }}/>
         </div>
-        <p style={{color:'white', fontSize: '64px', display:'flex', justifyContent: 'center'}}>Technologies I think I know</p>
+        <p style={{color:'white', fontSize: '64px', display:'flex', justifyContent: 'center'}}>Technologies I know</p>
         <div style= {{display: 'flex', justifyContent: 'center'}}>
             <TechstackComponent/>
         </div>
